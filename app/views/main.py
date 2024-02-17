@@ -27,6 +27,6 @@ def upload_image(request, folder=''):
         with open(file_path, 'wb+') as destination:
             for chunk in uploaded_file.chunks():
                 destination.write(chunk)
-        return JsonResponse({'secure_url': f'{DOMAIN}/image/{file_name}/{folder}'})
+        return JsonResponse({'secure_url': f'{DOMAIN}/files/{folder}/{file_name}'})
 
     return HttpResponse('')
