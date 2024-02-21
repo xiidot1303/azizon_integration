@@ -29,6 +29,8 @@ pip3 install -r requirements.txt
 python3 manage.py migrate
 python3 manage.py makemigrations app
 python3 manage.py migrate app
+python3 manage.py makemigrations payment
+python3 manage.py migrate payment
 python3 manage.py collectstatic
 python3 manage.py createsuperuser
 
